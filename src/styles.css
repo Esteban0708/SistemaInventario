@@ -1,7 +1,19 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 :root{
   --bg:#f6f9fc;
   --title:#2b2f36;
   --muted:#5f6b7a;
   --accent:#0b57d0;  
   --badge-bg:#e9efff; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
