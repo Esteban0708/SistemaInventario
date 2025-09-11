@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --bg:#f6f9fc;
+  --title:#2b2f36;
+  --muted:#5f6b7a;
+  --accent:#0b57d0;  
+  --badge-bg:#e9efff; 
+}
