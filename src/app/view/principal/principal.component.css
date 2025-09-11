@@ -6,8 +6,8 @@
   justify-content:center;     
   text-align:center;
 
-  min-height:60vh;
-  padding:4rem 1rem;
+  min-height:100vh;
+  padding:4rem;
   background:var(--bg);
 }
 
