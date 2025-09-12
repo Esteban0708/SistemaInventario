@@ -1,7 +1,9 @@
 [build]
-  base = "."
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist/sistema-inventario"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/*"
