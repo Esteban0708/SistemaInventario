@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './view/principal/principal.component';
 import { NavbarComponent } from './view/navbar/navbar.component';
 import { LoginComponent } from './view/login/login.component';
+import { ChatWidgeComponent } from './view/chat-widge/chat-widge.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    ChatWidgeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
