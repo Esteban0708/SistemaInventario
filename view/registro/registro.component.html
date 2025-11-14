@@ -1,0 +1,50 @@
+<div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+  <div class="bg-white shadow-xl rounded-xl w-full max-w-lg p-8">
+
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+      Crear tu cuenta
+    </h2>
+
+    <p class="text-center text-gray-500 mb-6">
+      Completa los datos para comenzar con tu plan
+      <span class="font-semibold text-blue-600">({{ planSeleccionado }})</span>
+    </p>
+
+    <form [formGroup]="registroForm" (ngSubmit)="registrar()" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Nombre de la tienda</label>
+        <input formControlName="nombreTienda"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Tu nombre completo</label>
+        <input formControlName="nombreUsuario"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Correo electrónico</label>
+        <input formControlName="email" type="email"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+      </div>      <div>
+        <label class="block text-gray-700 font-medium mb-1">Contraseña</label>
+        <input formControlName="password" type="password"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Confirmar contraseña</label>
+        <input formControlName="confirmPassword" type="password"
+          class="w-full px-4 py-2 rounded-lg border">
+      </div>
+
+      <button
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
+        Crear cuenta
+      </button>
+
+    </form>
+
+  </div>
+</div>
