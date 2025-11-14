@@ -5,9 +5,9 @@
     border: none;
     border-radius: 999px;
     padding: 14px 18px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+    box-shadow: 0 6px 20px rgba(165, 164, 164, 0.25);
     cursor: pointer;
-    background: #2e7d32;
+    background: #2e5b7d;
     color: #fff;
     font-weight: 600;
 }
@@ -47,7 +47,7 @@
     padding: 10px;
     height: 380px;
     overflow: auto;
-    background: #0b0b0b;
+    background: #aeaeae;
 }
 
 .msg {

@@ -1,59 +1,70 @@
 <app-navbar></app-navbar>
 
-<section id="inicio" class="hero">
-    <div class="hero__badge">
-        <i class="fa-solid fa-boxes-stacked icon-lg"></i>
+<section id="inicio" class="hero" revealOnScroll rootMargin="0px 0px -5% 0px">
+    <div class="hero__grid">
+
+        <div class="hero__col hero__col--text" revealOnScroll data-anim="up">
+
+            <h1 class="hero__title" revealOnScroll data-anim="up">
+                Gestión de Inventario <span class="accent">Inteligente</span>
+            </h1>
+
+            <p class="hero__subtitle" revealOnScroll data-anim="up">
+                Controla tu inventario de manera eficiente con nuestra plataforma minimalista y poderosa
+            </p>
+
+            <ul class="hero__features stagger" revealOnScroll data-anim="up">
+                <li style="--d:0"><i class="fa-solid fa-chart-simple icon"></i> Analytics</li>
+                <li style="--d:1"><i class="fa-solid fa-shield-halved icon"></i> Seguro</li>
+                <li style="--d:2"><i class="fa-solid fa-bolt icon"></i> Tiempo Real</li>
+            </ul>
+
+            <div class="btones stagger" revealOnScroll data-anim="up">
+                <button class="planes" style="--d:0">Ver Planes</button>
+                <button class="demo" style="--d:1">Demo Gratuito</button>
+            </div>
+        </div>
+
+        <div class="hero__col hero__col--media" revealOnScroll data-anim="right">
+            <img class="hero__art" src="assets/INVENTARIO.png"
+                alt="Sistema de inventario con IA (dashboard, robot, estantería)">
+        </div>
+
     </div>
 
-    <h1 class="hero__title">
-        Gestión de Inventario <span class="accent">Inteligente</span>
-    </h1>
-
-    <p class="hero__subtitle">
-        Controla tu inventario de manera eficiente con nuestra plataforma minimalista y poderosa
-    </p>
-
-    <ul class="hero__features">
-        <li><i class="fa-solid fa-chart-simple icon"></i> Analytics</li>
-        <li><i class="fa-solid fa-shield-halved icon"></i> Seguro</li>
-        <li><i class="fa-solid fa-bolt icon"></i> Tiempo Real</li>
-    </ul>
-    <div class="btones">
-        <button class="planes">Ver Planes</button>
-        <button class="demo">Demo Gratuito</button>
-    </div>
     <section id="servicios" class="herramientas">
         <div class="container">
-            <h2 class="h-title">Todo lo que necesitas</h2>
-            <p class="h-subtitle">Herramientas poderosas diseñadas para simplificar la gestión de tu inventario</p>
+            <h2 class="h-title" revealOnScroll data-anim="up">Todo lo que necesitas</h2>
+            <p class="h-subtitle" revealOnScroll data-anim="up">Herramientas poderosas diseñadas para simplificar la
+                gestión de tu inventario</p>
 
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
+            <div class="row g-4 stagger" revealOnScroll data-anim="up">
+                <div class="col-12 col-md-6 col-xl-3" style="--d:0">
+                    <div class="feature-card" revealOnScroll data-anim="left">
                         <div class="icon-badge"><i class="fa-solid fa-chart-line"></i></div>
                         <h3>Reportes Avanzados</h3>
                         <p>Analítica en tiempo real con gráficos interactivos para tomar decisiones informadas</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
+                <div class="col-12 col-md-6 col-xl-3" style="--d:1">
+                    <div class="feature-card" revealOnScroll data-anim="up">
                         <div class="icon-badge"><i class="fa-solid fa-bell"></i></div>
                         <h3>Alertas Inteligentes</h3>
                         <p>Notificaciones automáticas cuando el stock está bajo o hay productos vencidos</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
+                <div class="col-12 col-md-6 col-xl-3" style="--d:2">
+                    <div class="feature-card" revealOnScroll data-anim="up">
                         <div class="icon-badge"><i class="fa-solid fa-mobile-screen-button"></i></div>
                         <h3>Acceso Móvil</h3>
                         <p>Gestiona tu inventario desde cualquier dispositivo, en cualquier momento</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
+                <div class="col-12 col-md-6 col-xl-3" style="--d:3">
+                    <div class="feature-card" revealOnScroll data-anim="right">
                         <div class="icon-badge"><i class="fa-solid fa-user-group"></i></div>
                         <h3>Multi-usuario</h3>
                         <p>Colabora con tu equipo con roles y permisos personalizados</p>
@@ -62,67 +73,81 @@
             </div>
         </div>
     </section>
-    <section id="planes" class="pricing">
-        <div class="container">
-            <h2 class="pricing__title">Planes que se adaptan a ti</h2>
-            <p class="pricing__subtitle">
-                Escoge el plan perfecto para tu negocio. Todos incluyen 14 días de prueba gratuita.
-            </p>
+</section>
 
-            <div class="pricing__grid">
-                <article class="plan-card">
-                    <h3 class="plan-name">Básico</h3>
-                    <p class="plan-desc">Perfecto para pequeños negocios</p>
-                    <div class="plan-price"><span class="currency">$</span>29<span class="per">/mes</span></div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Hasta 1,000 productos</li>
-                        <li><i class="fa-solid fa-check"></i> 1 usuario</li>
-                        <li><i class="fa-solid fa-check"></i> Reportes básicos</li>
-                        <li><i class="fa-solid fa-check"></i> Soporte por email</li>
-                        <li><i class="fa-solid fa-check"></i> Copias de seguridad diarias</li>
-                    </ul>
-                    <button class="btn-choose btn-outline">Seleccionar Plan</button>
-                </article>
+<section id="planes" class="pricing">
+    <div class="container">
+        <h2 class="pricing__title">Planes que se adaptan a ti</h2>
+        <p class="pricing__subtitle">
+            Escoge el plan ideal para tu negocio. Desde opciones gratuitas hasta soluciones empresariales avanzadas.
+        </p>
 
-                <article class="plan-card plan-popular">
-                    <div class="popular-badge">Más Popular</div>
-                    <h3 class="plan-name">Profesional</h3>
-                    <p class="plan-desc">Ideal para empresas en crecimiento</p>
-                    <div class="plan-price"><span class="currency">$</span>79<span class="per">/mes</span></div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Hasta 10,000 productos</li>
-                        <li><i class="fa-solid fa-check"></i> 5 usuarios</li>
-                        <li><i class="fa-solid fa-check"></i> Reportes avanzados</li>
-                        <li><i class="fa-solid fa-check"></i> Alertas en tiempo real</li>
-                        <li><i class="fa-solid fa-check"></i> API integración</li>
-                        <li><i class="fa-solid fa-check"></i> Soporte prioritario</li>
-                        <li><i class="fa-solid fa-check"></i> Copias de seguridad automáticas</li>
-                    </ul>
-                    <button class="btn-choose">Seleccionar Plan</button>
-                </article>
+        <div class="pricing__grid">
+            <article class="plan-card free-plan">
+                <div class="popular-badge">Gratis</div>
+                <h3 class="plan-name">Starter</h3>
+                <p class="plan-desc">Comienza sin costo y descubre las funciones esenciales</p>
+                <div class="plan-price"><span class="currency">$</span>0<span class="per">/mes</span></div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Hasta 100 productos</li>
+                    <li><i class="fa-solid fa-check"></i> 1 usuario</li>
+                    <li><i class="fa-solid fa-check"></i> Reportes limitados</li>
+                    <li><i class="fa-solid fa-xmark"></i> Sin acceso móvil</li>
+                    <li><i class="fa-solid fa-xmark"></i> Sin integraciones externas</li>
+                    <li><i class="fa-solid fa-xmark"></i> Soporte comunitario</li>
+                </ul>
+                <button class="btn-choose btn-outline">Comenzar Gratis</button>
+            </article>
 
-                <article class="plan-card">
-                    <h3 class="plan-name">Empresarial</h3>
-                    <p class="plan-desc">Para grandes organizaciones</p>
-                    <div class="plan-price"><span class="currency">$</span>199<span class="per">/mes</span></div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Productos ilimitados</li>
-                        <li><i class="fa-solid fa-check"></i> Usuarios ilimitados</li>
-                        <li><i class="fa-solid fa-check"></i> Reportes personalizados</li>
-                        <li><i class="fa-solid fa-check"></i> Integraciones avanzadas</li>
-                        <li><i class="fa-solid fa-check"></i> Soporte 24/7</li>
-                        <li><i class="fa-solid fa-check"></i> Gestor de cuenta dedicado</li>
-                        <li><i class="fa-solid fa-check"></i> SLA garantizado</li>
-                    </ul>
-                    <button class="btn-choose btn-outline">Seleccionar Plan</button>
-                </article>
-            </div>
+            <article class="plan-card">
+                <h3 class="plan-name">Básico</h3>
+                <p class="plan-desc">Perfecto para pequeños negocios</p>
+                <div class="plan-price"><span class="currency">$</span>29.000<span class="per">/mes</span></div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Hasta 1,000 productos</li>
+                    <li><i class="fa-solid fa-check"></i> 2 usuarios</li>
+                    <li><i class="fa-solid fa-check"></i> Reportes básicos</li>
+                    <li><i class="fa-solid fa-check"></i> Soporte por email</li>
+                    <li><i class="fa-solid fa-check"></i> Copias de seguridad diarias</li>
+                </ul>
+                <button class="btn-choose btn-outline">Seleccionar Plan</button>
+            </article>
 
-            <p class="pricing__note">
-                ¿Necesitas algo personalizado? <a href="#contacto">Contáctanos</a>
-            </p>
+            <article class="plan-card plan-popular">
+                <div class="popular-badge">Más Popular</div>
+                <h3 class="plan-name">Profesional</h3>
+                <p class="plan-desc">Ideal para empresas en crecimiento</p>
+                <div class="plan-price"><span class="currency">$</span>79.000<span class="per">/mes</span></div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Hasta 10,000 productos</li>
+                    <li><i class="fa-solid fa-check"></i> 5 usuarios</li>
+                    <li><i class="fa-solid fa-check"></i> Reportes avanzados</li>
+                    <li><i class="fa-solid fa-check"></i> Alertas en tiempo real</li>
+                    <li><i class="fa-solid fa-check"></i> API de integración</li>
+                    <li><i class="fa-solid fa-check"></i> Soporte prioritario</li>
+                    <li><i class="fa-solid fa-check"></i> Copias de seguridad automáticas</li>
+                </ul>
+                <button class="btn-choose">Seleccionar Plan</button>
+            </article>
+            <article class="plan-card premium">
+                <h3 class="plan-name">Empresarial</h3>
+                <p class="plan-desc">Para grandes organizaciones que requieren control total</p>
+                <div class="plan-price"><span class="currency">$</span>199.000<span class="per">/mes</span></div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Productos ilimitados</li>
+                    <li><i class="fa-solid fa-check"></i> Usuarios ilimitados</li>
+                    <li><i class="fa-solid fa-check"></i> Reportes personalizados</li>
+                    <li><i class="fa-solid fa-check"></i> Integraciones avanzadas</li>
+                    <li><i class="fa-solid fa-check"></i> Soporte 24/7</li>
+                    <li><i class="fa-solid fa-check"></i> Gestor de cuenta dedicado</li>
+                    <li><i class="fa-solid fa-check"></i> SLA garantizado</li>
+                </ul>
+                <button class="btn-choose btn-outline">Seleccionar Plan</button>
+            </article>
         </div>
-    </section>
 
-
+        <p class="pricing__note">
+            ¿Necesitas algo personalizado? <a href="#contacto">Contáctanos</a>
+        </p>
+    </div>
 </section>

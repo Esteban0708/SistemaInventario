@@ -24,7 +24,6 @@ export class ChatWidgeComponent {
 
   toggle() {
     this.open = !this.open;
-
     if (this.open && !this.greeted) {
       this.history.push({
         role: 'assistant',
@@ -32,7 +31,6 @@ export class ChatWidgeComponent {
       });
       this.greeted = true;
     }
-
     setTimeout(() => this.scrollBottom(), 0);
   }
 
@@ -46,16 +44,35 @@ export class ChatWidgeComponent {
     this.scrollBottom();
 
     this.chat.send(msg).then(resp => {
-      if (resp.type === 'text') {
-        this.history.push({ role: 'assistant', content: resp.text });
-      } else if (resp.type === 'navigate') {
-        this.history.push({ role: 'assistant', content: resp.text });
-        this.router.navigateByUrl(resp.route);
+      switch (resp.type) {
+        case 'text':
+          this.history.push({ role: 'assistant', content: resp.text });
+          break;
+
+        case 'navigate':
+          this.history.push({ role: 'assistant', content: resp.text });
+          this.router.navigateByUrl(resp.route);
+          break;
+
+        case 'error':
+        default:
+          this.history.push({
+            role: 'assistant',
+            content: `⚠️ ${resp.text || 'Ocurrió un error al procesar su solicitud.'}`
+          });
+          break;
       }
+    }).catch(err => {
+      console.error('Error en chat.send:', err);
+      this.history.push({
+        role: 'assistant',
+        content: '⚠️ No fue posible conectar con el servicio. Intente nuevamente más tarde.'
+      });
     }).finally(() => {
       this.loading = false;
       this.scrollBottom();
     });
+
   }
 
   private scrollBottom() {

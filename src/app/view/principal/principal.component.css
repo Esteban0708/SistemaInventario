@@ -13,8 +13,7 @@ body {
     text-align: center;
     min-height: 100vh;
     min-height: 100svh;
-
-    background: var(--bg);
+    background: white;
     padding: clamp(1rem, 3vw, 2rem);
 }
 
@@ -135,7 +134,7 @@ body {
 }
 
 .herramientas {
-    background: var(--bg);
+    background: white;
     padding: 56px 16px
 }
 
@@ -200,7 +199,7 @@ body {
 }
 
 .pricing {
-    background: var(--bg);
+    background: white;
     padding: 56px 16px
 }
 
@@ -227,18 +226,110 @@ body {
 .pricing__grid {
     display: grid;
     gap: 24px;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(2px);
+    transition: opacity .6s ease, transform .6s ease, filter .6s ease;
+    will-change: opacity, transform, filter;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+}
+/* Contenedor de dos columnas */
+.hero__grid {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* texto | imagen */
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+/* Columna de texto alineada a la izquierda */
+.hero__col--text {
+  text-align: left;
+}
+
+/* Imagen responsiva con buena presencia */
+.hero__art {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;          /* opcional */
+  box-shadow: 0 12px 40px rgba(0,0,0,.08); /* opcional */
+  object-fit: contain;
+}
+
+/* En móviles, columnas apiladas (texto arriba, imagen abajo) */
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__col--media {
+    order: 2;                /* texto primero, imagen después */
+  }
+  .hero {                    /* como antes centrado verticalmente */
+    justify-content: center;
+  }
+}
+
+/* Ajustes de la sección hero para que no centre TODO el texto */
+.hero {
+  /* mantenemos tus estilos previos, pero: */
+  text-align: initial;     /* deja que cada col defina su alineación */
+  align-items: stretch;    /* el grid centra el contenido */
+}
+
+.reveal[data-anim="up"] {
+    transform: translateY(24px);
+}
+
+.reveal[data-anim="left"] {
+    transform: translateX(-24px);
+}
+
+.reveal[data-anim="right"] {
+    transform: translateX(24px);
+}
+
+.reveal[data-anim="scale"] {
+    transform: scale(.96);
+}
+
+.reveal.in-view[data-anim] {
+    transform: none;
+}
+
+.stagger>* {
+    --d: 0;
+    transition-delay: calc(var(--d) * 90ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
 }
 
 @media (min-width:768px) {
     .pricing__grid {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width:1200px) {
     .pricing__grid {
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -365,6 +456,58 @@ body {
 .pricing__note a:hover {
     text-decoration: underline
 }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(2px);
+    transition:
+        opacity .6s ease,
+        transform .6s ease,
+        filter .6s ease;
+    will-change: opacity, transform, filter;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+}
+
+.stagger>* {
+    --d: 0;
+    transition-delay: calc(var(--d) * 80ms);
+}
+
+.free-plan {
+    border: 2px dashed #00b894;
+    background: rgba(0, 184, 148, 0.05);
+}
+
+.free-plan .popular-badge {
+    background: #00b894;
+    color: white;
+}
+
+.free-plan .btn-choose {
+    border-color: #00b894;
+    color: #00b894;
+}
+
+.free-plan .btn-choose:hover {
+    background: #00b894;
+    color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
 
 @media (max-width: 640px) {
     .hero {
